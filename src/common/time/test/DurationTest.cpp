@@ -18,7 +18,7 @@ TEST(WallClock , time1 ) {
     std::vector<int64_t> timer;
     std::vector<int64_t>s;
 
-    for (uint32_t i = 0; i < 25; i++) {
+    for (uint32_t i = 0; i < 15; i++) {
 
         auto sec=WallClock::slowNowInMicroSec();
         usleep(3000);
