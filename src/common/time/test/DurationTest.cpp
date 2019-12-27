@@ -7,6 +7,9 @@
 #include "base/Base.h"
 #include <gtest/gtest.h>
 #include "time/Duration.h"
+#include <math.h>
+#include "time/WallClock.h"
+#include <vector>
 
 using nebula::time::Duration;
 
@@ -49,4 +52,3 @@ int main(int argc, char** argv) {
 
     return RUN_ALL_TESTS();
 }
-
