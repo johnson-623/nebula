@@ -28,12 +28,15 @@ BENCHMARK_RELATIVE(systemclock_get_time_t, iters) {
         folly::doNotOptimizeAway(ts);
     }
 }
+
+//slow now function
 BENCHMARK_RELATIVE(wallclock_get_msec_slow, iters) {
     for (uint32_t i = 0; i < iters; i++) {
         auto ts = WallClock::slowNowInMilliSec();
         folly::doNotOptimizeAway(ts);
     }
 }
+//fast now function
 BENCHMARK_RELATIVE(wallclock_get_msec_fast, iters) {
     for (uint32_t i = 0; i < iters; i++) {
         auto ts = WallClock::fastNowInMilliSec();
